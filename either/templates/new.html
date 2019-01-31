@@ -1,0 +1,21 @@
+{% extends "either/base.html" %}
+
+{% block bb %}
+<form action="/either/create/" method="post">
+    {% csrf_token %}
+  <div class="form-group">
+    <label for="title">제목</label>
+    <input type="text" class="form-control" id="title" placeholder="만약에..." name="title">
+  </div>
+  <div class="form-group">
+    <label for="A">A</label>
+    <input type="text" class="form-control" id="A" name="A" >
+  </div>
+  <div class="form-group">
+    <label for="B">B</label>
+    <input type="text" class="form-control" id="B" name="B" >
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

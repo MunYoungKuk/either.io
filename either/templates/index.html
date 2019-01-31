@@ -1,0 +1,10 @@
+{% extends "either/base.html" %}
+
+{% block bb %}
+    {% for question in questions %}
+        <div class="jumbotron">
+            <h1 class="display-4 text-center">{{question.title}}</h1>
+            <a class="btn btn-primary btn-lg" href="/either/{{question.id}}/" role="button">보기</a>
+        </div>
+    {% endfor %}
+{% endblock %}
